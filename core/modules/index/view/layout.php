@@ -6,6 +6,13 @@
 <link rel="stylesheet" type="text/css" href="admin/res/bootstrap3/css/bootstrap.min.css">
 <script src="admin/res/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="admin/res/font-awesome/css/font-awesome.min.css">
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+  <link rel="stylesheet" type="text/css" href="admin/res/lat-lng-picker/css/jquery-gmaps-latlon-picker.css"/>
+  <script src="admin/res/lat-lng-picker/js/jquery-gmaps-latlon-picker.js"></script>
+
+
 </head>
 <?php 
 /// print_r($_GLOBAL); 

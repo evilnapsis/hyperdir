@@ -41,6 +41,15 @@ $image = ImageData::getById($post->image_id);
     </li>
     </ul>
 </div>
+
+<?php if($post->use_map):?>
+<fieldset class="gllpLatlonPicker">
+    <div class="gllpMap"></div>
+    <input type="hidden" name="lat" class="gllpLatitude" value="<?php echo $post->lat;?>"/>
+    <input type="hidden" name="lng" class="gllpLongitude" value="<?php echo $post->lng; ?>"/>
+    <input type="hidden" class="gllpZoom" value="4"/>
+  </fieldset>
+<?php endif;?>
 		<br><br>
 <?php if(count($comments)>0):?>
 <h4>Comentarios (<?php echo count($comments)?>)</h4>
