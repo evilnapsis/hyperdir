@@ -2,6 +2,10 @@
 class KindData {
 	public static $tablename = "kind";
 
+	public $id;
+	public $name;
+	public $description;
+
 
 	public function KindData(){
 		$this->title = "";

@@ -2,6 +2,13 @@
 class ConfigData {
 	public static $tablename = "config";
 
+	public $id;
+	public $slug;
+	public $name;
+	public $kind;
+	public $description;
+	public $advice;
+
 
 	public function ConfigData(){
 		$this->title = "";

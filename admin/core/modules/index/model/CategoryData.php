@@ -2,6 +2,11 @@
 class CategoryData {
 	public static $tablename = "category";
 
+	public $id;
+	public $name;
+	public $created_at;
+	public $category_id;
+
 
 	public function CategoryData(){
 		$this->title = "";

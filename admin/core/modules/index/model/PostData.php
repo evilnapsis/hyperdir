@@ -2,6 +2,23 @@
 class PostData {
 	public static $tablename = "post";
 
+	public $id;
+	public $image_id;
+	public $title;
+	public $content;
+	public $address;
+	public $phone;
+	public $email;
+	public $lat;
+	public $lng;
+	public $is_public;
+	public $use_map;
+	public $accept_comments;
+	public $show_image;
+	public $created_at;
+	public $user_id;
+	public $kind, $c;
+
 
 	public function PostData(){
 		$this->title = "";

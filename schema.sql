@@ -12,14 +12,14 @@ insert into kind(name,description) values("Administrador","Puede administrar tod
 
 create table user(
 	id int not null auto_increment primary key,
-	name varchar(50) not null,
-	lastname varchar(50) not null,
+	name varchar(50) ,
+	lastname varchar(50) ,
 	username varchar(50),
-	email varchar(255) not null,
-	password varchar(60) not null,
+	email varchar(255) ,
+	password varchar(60) ,
 	image varchar(255),
 	is_active boolean not null default 1,
-	kind_id int not null,
+	kind_id int default 1,
 	foreign key(kind_id) references kind(id),
 	created_at datetime not null
 );
@@ -28,21 +28,21 @@ insert into user(name,username,password,is_active,kind_id,created_at) value ("Ad
 
 create table album (
 	id int not null auto_increment primary key,
-	title varchar(200) not null,
-	description text not null,
-	created_at datetime not null,
-	user_id int not null,
+	title varchar(200) ,
+	description text ,
+	created_at datetime ,
+	user_id int ,
 	foreign key(user_id) references user(id)
 );
 
 
 create table image (
 	id int not null auto_increment primary key,
-	src varchar(200) not null,
-	title varchar(200) not null,
-	description text not null,
-	created_at datetime not null,
-	user_id int not null,
+	src varchar(200) ,
+	title varchar(200) ,
+	description text ,
+	created_at datetime ,
+	user_id int ,
 	album_id int,
 	foreign key(album_id) references album(id),
 	foreign key(user_id) references user(id)
@@ -68,8 +68,8 @@ create table post (
 	use_map boolean not null default 0,
 	accept_comments boolean not null default 1,
 	show_image boolean not null default 1,
-	created_at datetime not null,
-	user_id int not null,
+	created_at datetime ,
+	user_id int ,
 	kind int default 1,
 	foreign key(image_id) references image(id),
 	foreign key(user_id) references user(id)
@@ -78,8 +78,8 @@ create table post (
 
 create table category(
 	id int not null auto_increment primary key,
-	name varchar(50) not null,
-	created_at datetime not null,
+	name varchar(50),
+	created_at datetime,
 	category_id int ,
 	foreign key(category_id) references category(id)
 	);
@@ -98,9 +98,9 @@ Kind of comment
 */
 create table comment (
 	id int not null auto_increment primary key,
-	name varchar(200) not null,
-	email varchar(200) not null,
-	content text not null,
+	name varchar(200),
+	email varchar(200),
+	content text,
 	is_public boolean not null default 0,
 	is_read boolean not null default 0,
 	created_at datetime not null,
@@ -134,10 +134,10 @@ Kind of config
 
 create table config(
 	id int not null auto_increment primary key,
-	slug varchar(100) not null,
-	name varchar(100) not null,
+	slug varchar(100) ,
+	name varchar(100) ,
 	kind varchar(100) not null default 1,
-	description text not null,
+	description text ,
 	advice text
 );
 

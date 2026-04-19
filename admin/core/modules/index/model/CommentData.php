@@ -2,6 +2,18 @@
 class CommentData {
 	public static $tablename = "comment";
 
+	public $id;
+	public $name;
+	public $email;
+	public $content;
+	public $is_public;
+	public $is_read;
+	public $created_at;
+	public $kind;
+	public $user_id;
+	public $comment_id;
+	public $post_id, $c;
+
 
 	public function CommentData(){
 		$this->title = "";

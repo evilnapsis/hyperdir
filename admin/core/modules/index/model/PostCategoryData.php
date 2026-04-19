@@ -2,6 +2,9 @@
 class PostCategoryData {
 	public static $tablename = "post_category";
 
+	public $post_id;
+	public $category_id;
+
 
 	public function PostCategoryData(){
 		$this->title = "";

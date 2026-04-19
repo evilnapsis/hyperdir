@@ -2,6 +2,14 @@
 class ImageData {
 	public static $tablename = "image";
 
+	public $id;
+	public $src;
+	public $title;
+	public $description;
+	public $created_at;
+	public $user_id;
+	public $album_id;
+
 
 	public function ImageData(){
 		$this->title = "";

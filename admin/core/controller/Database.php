@@ -2,7 +2,8 @@
 class Database {
 	public static $db;
 	public static $con;
-	function Database(){
+	public $user, $pass, $host, $ddbb;
+	function __construct(){
 		$this->user="root";$this->pass="";$this->host="localhost";$this->ddbb="hyperdir";
 	}
 
