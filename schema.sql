@@ -1,4 +1,9 @@
-/* HyperDir basado en Zard by evilnapsis */
+/* 
+* Hyperdir: Sistema de Directorio con PHP y MySQL
+* @autor: @evilnapsis
+* @updated: 2026-05-04
+ */
+
 create database hyperdir;
 use hyperdir;
 
@@ -144,3 +149,6 @@ create table config(
 insert into config(slug,name,description) value ("navbar_text","Texto del Navbar ","HYPERDIR");
 insert into config(slug,name,description) value ("site_title","Titulo del sitio","HYPERDIR");
 insert into config(slug,name,description) value ("site_description","Descripcion del Sitio","Sistema de Directorio Basico");
+
+/***/
+ALTER TABLE category ADD COLUMN color VARCHAR(255) DEFAULT '#6366f1' AFTER name;
